@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 
 # Variables.
 urls = []
+search_query = "cs"
 
 
 def create_results_folder(folder_name: str = "pdf_results"):
@@ -73,6 +74,7 @@ def get_pdfs(query: str, page: int = 1):
 
 
 # Get pdfs and download each one.
+search_query = input("Search query: ")
 start_page = int(input("Start page: "))
 end_page = int(input("End page: "))
 
@@ -83,7 +85,7 @@ folder_path = create_results_folder()
 print("\n----------Scraping Results:----------")
 for current in range(start_page, end_page+1):
     print(f"\nScraping from page: {current}")
-    get_pdfs("cours info", current)
+    get_pdfs(search_query, current)
 
 
 # Download from each url.
