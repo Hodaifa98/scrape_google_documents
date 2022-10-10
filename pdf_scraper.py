@@ -87,7 +87,7 @@ for current in range(start_page, end_page+1):
 
 
 # Download from each url.
-print("\n----------Download Results:----------")
+print("\n----------Downloading Results:----------")
 for url in urls:
     download_file(url, folder_path)
     new_thread = Thread(target=download_file, args=(url, folder_path))
