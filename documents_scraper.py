@@ -12,7 +12,7 @@ search_query = "cs"
 document_type = "pdf"
 
 
-def create_results_folder(folder_name: str = f"{document_type}_results"):
+def create_results_folder(folder_name: str = "results"):
     """Create a folder to store results.
     Keyword arguments:
         folder_name (str): Destination folder name. (default: "document_type_results")
@@ -85,7 +85,8 @@ while document_type != "pdf" and document_type != "docx" and document_type != "d
 
 
 # Create downloads folder.
-folder_path = create_results_folder()
+folder_path = create_results_folder(f"{document_type}_results")
+
 
 # Loop through pages.
 print("\n----------Scraping Results:----------")
